@@ -18,10 +18,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Administrateur',
             'email' => 'test@example.com',
              'password' => bcrypt('password'),
-                'phone' => '+32465745775',
+                'phone' => '+12398190255',
                 'email_verified_at' => now(),
                 'role' => 'ROLE_ADMIN',
-                //'status' => 'active',
+                'activate' => true,
         ]);
     }
 }
