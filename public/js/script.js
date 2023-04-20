@@ -51,6 +51,7 @@ $('#delete_btn').click(function () {
                 window.location.reload(true);
             },
             error: function (err) {
+                console.log(err)
                 alert("An error ocurred while loading data ...");
             }
         });
@@ -79,7 +80,7 @@ $('#delete_btn').click(function () {
             type: "POST",
             dataType: "JSON",
             data: JSON.stringify({
-                ob: jsonObj
+                ob: jsonObj,subject:$('#subject').val(),message:$('#message_mail').text()
             }),
             success: function (data) {
                 window.location.reload(true);
